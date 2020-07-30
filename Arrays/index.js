@@ -39,8 +39,11 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 */
 
 function pushString(arr) {
+  arr[arr.length]="last element"
   // CODE HERE
-  console.log(arr);
+
+  // console.log(arr);
+  return arr
 }
 
 /*
@@ -58,6 +61,8 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 */
 
 function push(array, value) {
+  array[array.length]=value
+  return array
   // CODE HERE
 }
 
@@ -80,6 +85,9 @@ true
 */
 
 function printElements(array) {
+  for(let i=0; i<array.length; i++){
+    console.log(array[i])
+  }
   // CODE HERE
 }
 
@@ -109,6 +117,14 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
+  let newArray = []
+  for(let i=0; i<array.length; i++){
+    // for(let j=0; j<array.length; j++){
+      if(!newArray.includes(array[i])){
+        newArray.push(array[i])
+      }
+    // }
+  }return newArray
   // CODE HERE
 }
 
@@ -125,6 +141,11 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
+  for(let i =0; i<array1.length; i++){
+    if(array2.includes(array1[i])){
+      return true
+    }
+  }return false
   // CODE HERE
 }
 
@@ -141,6 +162,19 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 */
 
 function compareArrays(array1, array2) {
+  let newArray=[]
+  for(let i=0; i<array1.length; i++){
+    for(let j=0; j<array2.length; j++){
+      if(!newArray.includes(array1[i])){
+        if(array1[i]===array2[j]){
+          newArray.push(array1[i])
+        }
+      }
+      
+     
+    }
+    
+  }return newArray
   // CODE HERE
 }
 
@@ -156,6 +190,12 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 */
 
 function compareArraysOpposite(array1, array2) {
+  let newArray=[]
+  for(let i=0; i<array1.length; i++){
+    if(!array2.includes(array1[i])){
+      newArray.push(array1[i])
+    }
+  }return newArray
   // CODE HERE
 }
 
@@ -181,6 +221,7 @@ retrieveValue(twoDimentionArray, 3, 1) ===> 1
 */
 
 function retrieveValue(arr, row, col) {
+  return arr[row][col]
   // CODE HERE
 }
 
@@ -211,6 +252,13 @@ createTwoDArray(3, 5) ===> [
 */
 
 function createTwoDArray(row, col) {
+  let array=[]
+  for(let i=0; i<row; i++){
+    array.push([])
+    for(let j=0; j<col; j++){
+      array[i][j]=0
+    }
+  }return array
   // CODE HERE
 }
 
