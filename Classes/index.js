@@ -20,6 +20,10 @@ IT ALSO HAS ANOTHER PROPERTY type THAT EQUALS THE STRING 'parent class'
 */
 
 function MyFirstClass(name) {
+  this.name=name
+  this["parent class"]
+  this.type="parent class"
+
   // CODE HERE
 }
 
@@ -29,6 +33,10 @@ QUESTION 2
 USING THE PROTOTYPE CHAIN, ADD THE METHOD getNumberOfChars THAT JUST RETURNS THE NUMBER OF CHARACTERS IN THE NAME
 
 */
+MyFirstClass.prototype.getNumberOfChars=()=>{
+
+
+}
 
 // CODE HERE
 
@@ -43,6 +51,7 @@ REMEMBER TO USE THE METHOD call AND FEED this AS THE FIRST ARGUMENT
 */
 
 function MySecondClass(name) {
+  MyFirstClass.call(name)
   // CODE HERE
 }
 
