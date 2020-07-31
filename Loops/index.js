@@ -29,6 +29,9 @@ CREATE A FUNCTION THAT ACCEPTS ONE ARGUMENT, THE NUMBER OF TIMES IT WILL CONSOLE
 
 function dynamicHelloWorld(num) {
   // CODE HERE
+  for(let i=0; i<num; i++){
+    console.log("hello world")
+  }
 }
 
 /*
@@ -39,6 +42,9 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
+  for(let i=0; i<str.length; i++){
+    console.log(str[i])
+  }
   // CODE HERE
 }
 
@@ -54,6 +60,11 @@ e.g. checkIfCharExists('hello', 'l') ===> true
 */
 
 function checkIfCharExists(str, char) {
+  for(let i=0; i<str.length; i++){
+    if(str[i]===char){
+      return true 
+    }
+  }return false
   // CODE HERE
 }
 
@@ -68,6 +79,12 @@ e.g. indexOf('hello', 'l') ===> 2
 */
 
 function indexOf(str, char) {
+  for(let i=0; i<str.length;i++){
+    if(str[i]===char){
+      return str.indexOf(char)
+      break
+    }
+  }return -1
   // CODE HERE
 }
 
@@ -100,6 +117,7 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
+
   // CODE HERE
 }
 
@@ -114,10 +132,11 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(n) {
+
   // CODE HERE
 }
 
-console.log(fibonacci(5));
+console.log(fibonacci(5)); 
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
@@ -133,7 +152,7 @@ const runner = new Mocha({});
 
 runner.addFile('./test.js');
 
-runner.run();
+runner.run(); 
 
 module.exports = {
   helloWorld3Times,
