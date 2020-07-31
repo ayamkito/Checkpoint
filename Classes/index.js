@@ -33,9 +33,8 @@ QUESTION 2
 USING THE PROTOTYPE CHAIN, ADD THE METHOD getNumberOfChars THAT JUST RETURNS THE NUMBER OF CHARACTERS IN THE NAME
 
 */
-MyFirstClass.prototype.getNumberOfChars=()=>{
-
-
+MyFirstClass.prototype.getNumberOfChars= function (name){
+ return this.name.length
 }
 
 // CODE HERE
@@ -51,7 +50,7 @@ REMEMBER TO USE THE METHOD call AND FEED this AS THE FIRST ARGUMENT
 */
 
 function MySecondClass(name) {
-  MyFirstClass.call(name)
+  MyFirstClass.call(this, name)
   // CODE HERE
 }
 
@@ -64,6 +63,7 @@ YOU MAY WANT TO LINK THE PROTOTYPICAL CHAINS AND USE Object.create
 
 
 */
+MySecondClass.prototype=Object.create(MyFirstClass.prototype)
 
 // CODE HERE
 
@@ -74,7 +74,7 @@ MAKE SURE THE CONSTRUCTOR FUNCTION FOR MySecondClass's INSTANCE IS INDEED MySeco
 
 
 */
-
+MySecondClass.prototype.constructor=MySecondClass
 // CODE HERE
 
 /*
