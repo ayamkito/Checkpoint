@@ -117,7 +117,17 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
-
+  for(let i=1; i<=num; i++){
+    if((i%3===0)&&(i%5===0)){
+      console.log("FizzBuzz")
+    }else if(i%3===0){
+      console.log("Fizz")
+    }else if(i%5===0){
+      console.log("Buzz")
+    }else{
+      console.log(i)
+    }
+  }
   // CODE HERE
 }
 
@@ -132,7 +142,17 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(n) {
-
+  var answer = 0
+if(answer===0){
+   answer+=1
+  //  console.log(answer)
+ }if(answer===1){
+   for(let i =0; i<n; i++){
+   answer+=i
+  //  console.log(answer)
+  }
+   console.log("recursion is still a problem for me!")
+ }return answer
   // CODE HERE
 }
 
